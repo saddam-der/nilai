@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/mapel/Home', function () {
+    return view('mapel/Home');
+});
+
+Route::get('/mapel/Siswa', function () {
+    return view('mapel/Siswa');
 });
 
 
@@ -22,6 +26,6 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-// Route::group(['prefix' => 'lord'], function () {
-//     Voyager::routes();
-// });
+Route::group(['prefix' => 'mapel'], function () {
+    Voyager::routes();
+});

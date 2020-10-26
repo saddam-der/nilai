@@ -1,6 +1,7 @@
 @extends('voyager::master')
 
 @section('content')
-    
-    <p>hello</p> 
+    <div class="container-fluid">
+        asdds
+    </div>
 @endsection
