@@ -7,7 +7,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
+                    <th scope="col">Nama</th>
                     <th scope="col">Last</th>
                     <th scope="col">Handle</th>
                     <th scope="col">Handle</th>
@@ -23,34 +23,6 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>

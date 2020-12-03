@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Voyager\MuridController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +22,21 @@ Route::get('/mapel/Siswa', function () {
     return view('mapel/Siswa');
 });
 
+Route::get('/', function () {
+    return view('landing');
+});
+
+Route::get('/export', '\App\Http\Controllers\Voyager\MuridController@export');
+
+// Route::get('/users_server_side', [MuridController::class, 'getAllUserServerSide']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::get('murid','\App\Http\Controllers\Voyager\MuridController@index')->middleware('admin.user');
+    // Route::get('getAllUserServerSide','\App\Http\Controllers\Voyager\MuridController@getAllUserServerSide')->middleware('admin.user');
 });
 
-Route::group(['prefix' => 'mapel'], function () {
-    Voyager::routes();
-});
+// Route::group(['prefix' => 'mapel'], function () {
+//     Voyager::routes();
+// });
