@@ -59,10 +59,7 @@
                             @endphp
                             <tr>
                                 <td>{{ $item->muridnya->nama }}</td>
-                                @if($item->kd1 < 77)
-                                <td style="background-color: red">
-                                    {{ $item->kd1 }}</td>
-                                    @endif
+                                <td>{{ $item->kd1 }}</td>
                                 <td>{{ $item->kd2 }}</td>
                                 <td>{{ $item->kd3 }}</td>
                                 <td>{{ $item->kd4 }}</td>
