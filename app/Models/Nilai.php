@@ -22,12 +22,15 @@ class Nilai extends Model
 
     public function muridnya()
     {
-        return $this->belongsTo('App\Models\murid', 'id_murid')->orderBy('nama');
+        return $this->belongsTo('App\Models\murid', 'id_murid');
+        // return $this->belongsToMany('App\Models\murid', 'murid_nilais');
+        // return $this->hasOne('App\Models\murid', 'id');
     }
 
     public function mapelnya()
     {
         return $this->belongsTo('App\Models\Mapel', 'id_mapel');
+        // return $this->belongsToMany('App\Models\mapel', 'mapel_nilais');
     }
 
 }

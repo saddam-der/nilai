@@ -26,8 +26,8 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/export', '\App\Http\Controllers\Voyager\MuridController@export');
-
+Route::get('admin/export', '\App\Http\Controllers\Voyager\MuridController@export');
+Route::get('admin/export_pdf', '\App\Http\Controllers\Voyager\MuridController@export_pdf');
 // Route::get('/users_server_side', [MuridController::class, 'getAllUserServerSide']);
 
 Route::group(['prefix' => 'admin'], function () {

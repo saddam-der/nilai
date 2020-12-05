@@ -15,12 +15,12 @@ class Murid extends Model
     protected $fillable = [
     	'nama',
     	'kelas',
-    	'jurusan',
     ];
 
     public function nilainya()
     {
-        return $this->hasMany('App\Models\Nilai')->orderBy('nama');
+        // return $this->hasMany('App\Models\Nilai')->orderBy('nama');
+        // return $this->belongsToMany('App\Models\nilai', 'murid_nilai');
     }
 
 

@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Voyager;
 
 use App\Models\Murid;
 use App\Models\Nilai;
-use Yajra\DataTables\Facades\DataTables;
 use App\Exports\NilaiReport;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade as PDF;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -24,6 +24,13 @@ class MuridController extends Controller
     public function export()
     {
         return Excel::download(new NilaiReport, 'NIlai.xlsx');
+    }
+
+    public function export_pdf()
+    {
+    	$nilai = Nilai::all();
+    	$pdf = PDF::loadview('exports/nilai_pdf',['nilai'=>$nilai]);
+    	return $pdf->download('laporan-nilai.pdf');
     }
 }
 
